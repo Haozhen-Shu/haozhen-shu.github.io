@@ -4003,48 +4003,28 @@ input, select, textarea {
 	margin-right: 30px;
 }
 
-/* The parent wrapper - stacks categories vertically */
-.skills_wrapper {
+.skills_container {
     display: flex;
     flex-direction: column;
-    gap: 0.6rem;
-    padding: 1rem 0;
-}
-
-/* Each category row - puts label + tags on one line */
-.skill_row {
-    display: flex;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 0.4rem 0.6rem;
-}
-
-/* The category label */
-.skill_label {
-    font-weight: 700;
-    font-size: 0.85rem;
-    color: #4a6fa5;
-    white-space: nowrap;
-    min-width: 130px;
-}
-
-/* The tags container - flows horizontally */
-.skill_tags {
-    display: inline-flex;
-    flex-wrap: wrap;
-    gap: 0.3rem 0.5rem;
+    gap: 0.5rem;
     padding: 0;
     margin: 0;
     list-style: none;
 }
 
-/* Each individual skill tag */
-.skill_tags li {
-    background: #f0f4f8;
-    color: #2d3748;
-    padding: 0.2rem 0.9rem;
-    border-radius: 20px;
-    font-size: 0.78rem;
-    font-weight: 500;
-    white-space: nowrap;
+.skills_container .skill_item {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.3rem 0.5rem;
+    background: transparent !important;
+    padding: 0 !important;
+    border-radius: 0 !important;
+}
+
+/* Any skill that contains a colon is a category label */
+.skills_container .skill_item:has(:contains(":")) {
+    font-weight: 700;
+    color: #4a6fa5;
+    min-width: 130px;
 }
