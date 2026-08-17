@@ -4002,3 +4002,50 @@ input, select, textarea {
 .live_site{
 	margin-right: 30px;
 }
+
+.skills_wrapper {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.5rem 2rem;
+    padding: 1.5rem 0;
+}
+
+.skill_group {
+    display: flex;
+    flex-direction: column;
+}
+
+.skill_group_title {
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    color: #4a6fa5;  /* or your theme color */
+    margin-bottom: 0.6rem;
+    padding-bottom: 0.3rem;
+    border-bottom: 2px solid #e8edf3;
+}
+
+.skill_tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem 0.5rem;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.skill_tags li {
+    background: #f0f4f8;
+    color: #2d3748;
+    padding: 0.25rem 0.9rem;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 500;
+    white-space: nowrap;
+    transition: background 0.2s ease;
+}
+
+.skill_tags li:hover {
+    background: #dce4ed;
+}
