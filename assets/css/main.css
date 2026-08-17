@@ -4003,6 +4003,7 @@ input, select, textarea {
 	margin-right: 30px;
 }
 
+/* The parent wrapper - stacks categories vertically */
 .skills_wrapper {
     display: flex;
     flex-direction: column;
@@ -4010,6 +4011,7 @@ input, select, textarea {
     padding: 1rem 0;
 }
 
+/* Each category row - puts label + tags on one line */
 .skill_row {
     display: flex;
     align-items: center;
@@ -4017,14 +4019,16 @@ input, select, textarea {
     gap: 0.4rem 0.6rem;
 }
 
+/* The category label */
 .skill_label {
     font-weight: 700;
     font-size: 0.85rem;
-    color: #4a6fa5;  /* or your theme color */
+    color: #4a6fa5;
     white-space: nowrap;
-    min-width: 130px;  /* keeps labels aligned */
+    min-width: 130px;
 }
 
+/* The tags container - flows horizontally */
 .skill_tags {
     display: inline-flex;
     flex-wrap: wrap;
@@ -4034,6 +4038,7 @@ input, select, textarea {
     list-style: none;
 }
 
+/* Each individual skill tag */
 .skill_tags li {
     background: #f0f4f8;
     color: #2d3748;
@@ -4042,8 +4047,4 @@ input, select, textarea {
     font-size: 0.78rem;
     font-weight: 500;
     white-space: nowrap;
-}
-
-.skill_tags li:hover {
-    background: #dce4ed;
 }
