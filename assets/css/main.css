@@ -4003,28 +4003,38 @@ input, select, textarea {
 	margin-right: 30px;
 }
 
-.skills_container {
-    display: flex;
-    flex-direction: column;
-    gap: 0.5rem;
-    padding: 0;
-    margin: 0;
-    list-style: none;
+/* Each row acts like a table row */
+.skill_row {
+    display: table-row;
 }
 
-.skills_container .skill_item {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    gap: 0.3rem 0.5rem;
-    background: transparent !important;
-    padding: 0 !important;
-    border-radius: 0 !important;
-}
-
-/* Any skill that contains a colon is a category label */
-.skills_container .skill_item:has(:contains(":")) {
+/* Label acts like a table cell - fixed width */
+.skill_label {
+    display: table-cell;
     font-weight: 700;
+    font-size: 0.85rem;
     color: #4a6fa5;
-    min-width: 130px;
+    white-space: nowrap;
+    padding-right: 1rem;
+    min-width: 140px;
+    vertical-align: middle;
+}
+
+/* Tags act like table cells - flow horizontally */
+.skill_tag {
+    display: table-cell;
+    background: #f0f4f8;
+    color: #2d3748;
+    padding: 0.2rem 0.9rem;
+    border-radius: 20px;
+    font-size: 0.78rem;
+    font-weight: 500;
+    white-space: nowrap;
+    margin-right: 0.3rem;
+    vertical-align: middle;
+}
+
+/* Add spacing between tags */
+.skill_tag:not(:last-child) {
+    margin-right: 0.5rem;
 }
