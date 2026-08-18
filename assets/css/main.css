@@ -4038,3 +4038,84 @@ input, select, textarea {
 .skill_tag:not(:last-child) {
     margin-right: 0.5rem;
 }
+
+/* ======================================== */
+/* SKILLS SECTION - OVERRIDE OLD STYLES     */
+/* ======================================== */
+
+/* Force the wrapper to stack vertically */
+.skills_wrapper {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 0.6rem !important;
+    padding: 1rem 0 !important;
+    height: auto !important;  /* Override the 700px height */
+}
+
+/* Each category row - one line */
+.skill_row {
+    display: flex !important;
+    align-items: center !important;
+    flex-wrap: wrap !important;
+    gap: 0.4rem 0.6rem !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    border: none !important;
+    background: transparent !important;
+}
+
+/* The category label - narrow width */
+.skill_label {
+    display: inline-block !important;
+    font-weight: 700 !important;
+    font-size: 0.85rem !important;
+    color: #4a6fa5 !important;
+    white-space: nowrap !important;
+    min-width: 120px !important;  /* ← NARROWER */
+    width: 120px !important;      /* ← NARROWER */
+    padding: 0 !important;
+    margin: 0 !important;
+    background: transparent !important;
+    border: none !important;
+    vertical-align: middle !important;
+    font-family: "Source Sans Pro", Helvetica, sans-serif !important;
+    letter-spacing: 0.0375em !important;
+}
+
+/* The tags - inline pills */
+.skill_tag {
+    display: inline-block !important;
+    background: #f0f4f8 !important;
+    color: #2d3748 !important;
+    padding: 0.15rem 0.8rem !important;
+    border-radius: 20px !important;
+    font-size: 0.72rem !important;
+    font-weight: 500 !important;
+    white-space: nowrap !important;
+    margin: 0.1rem 0.2rem !important;
+    vertical-align: middle !important;
+    border: none !important;
+    font-family: "Source Sans Pro", Helvetica, sans-serif !important;
+}
+
+/* Add spacing between tags */
+.skill_tag:not(:last-child) {
+    margin-right: 0.3rem !important;
+}
+
+/* Hide the old list styles on the wrapper */
+.feature-icons {
+    margin: 0 !important;
+    padding: 0 !important;
+    display: block !important;
+}
+
+/* Override any old list styles */
+.feature-icons li {
+    display: none !important;  /* Hide the old skill_item elements */
+}
+
+/* Remove the old skills_container styles that conflict */
+.skills_container {
+    display: none !important;  /* Hide the old container completely */
+}
